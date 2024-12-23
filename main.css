@@ -1,0 +1,199 @@
+A:link { 
+  color: rgb(0, 0, 0); /* Цвет непосещенных ссылок */
+  }
+  A:visited { 
+  color: rgb(255, 255, 255); /* Цвет посещенных ссылок */
+  }
+   A:hover { 
+  color: rgb(246, 255, 0); /* Цвет ссылок при наведении на них курсора мыши */
+   }
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header"
+    "nav article"
+    "footer footer";
+  grid-template-rows: 70px 2fr ;
+  grid-template-columns: 25% 7fr ;
+  grid-gap: 5px;
+  height: 100vh;
+  margin: 0;
+  background-image: url(/img/phonn.png);
+  }
+header, footer, article, nav, div {
+  padding: 20px;
+  background: rgb(36, 164, 190);
+}
+#pageHeader {
+  grid-area: header;
+  opacity: .9;
+}
+#pageFooter {
+  grid-area: footer;
+  opacity: .9;
+  height:40px ;
+}
+#mainArticle { 
+  grid-area: article;   
+  opacity: .9;   
+  }
+#mainNav { 
+  grid-area: nav; 
+  opacity: .9;
+  padding: 0 10px; /* Отступы вокруг текста */
+  float: left; 
+  }
+  @media all and (max-width: 1200px) {
+    body { 
+        grid-template-areas:
+            "header header"
+            "nav article"
+            "footer footer";
+        grid-template-columns: repeat(3, auto);
+        grid-template-rows: auto auto auto;
+    }
+}
+
+@media all and (max-width: 768px) {
+    body { 
+        grid-template-areas:
+            "header"
+            "nav"
+            "article"
+            "footer";
+        grid-template-rows: auto auto auto auto;
+        grid-template-columns: auto;
+    }
+    
+    #mainNav {
+        padding-left:5px; 
+        padding-right:5px; 
+        float:none; 
+        text-align:center;
+    }
+
+    .media {
+        font-size: smaller; /* Уменьшаем размер шрифта на мобильных устройствах */
+    }
+}
+
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    padding: 10px;
+  }
+  .grid-container1 {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 10px;
+  }
+  .grid-item {
+    background:  #f2f2f2;
+    border: 1px solid #ffffff; /* Граница ячеек */
+    padding: 10px;
+    text-align: center; /* Выравнивание текста по центру */
+  }
+
+  .media{
+    width: 180px; /* Ширина меню */
+  list-style: none; /* Для списка убираем маркеры */
+  margin: 0; /* Нет отступов вокруг */
+  padding: 0; /* Убираем поля вокруг текста */
+  font-family: Arial, sans-serif; /* Рубленый шрифт для текста меню */
+  font-size: 5pt; /* Размер названий в пункте меню */
+  }
+  li ul {
+  position: absolute; /* Подменю позиционируются абсолютно */
+  display: none; /* Скрываем подменю */
+  left: 160px;
+  top: 137px;
+  margin-left: 165px; /* Сдвигаем подменю вправо */
+  margin-top: -2em; /* Сдвигаем подменю вверх */
+  }
+  li a {
+  display: block; /* Ссылка как блочный элемент */
+  padding: 3px; /* Поля вокруг надписи */
+  text-decoration: none; /* Подчеркивание у ссылок убираем */
+  width:150px ;
+  }
+  li a:hover {
+  color: #ffe; /* Цвет текста активного пункта */
+  background-color: #b700ff; /* Цвет фона активного пункта */
+  }
+  li:hover ul {
+  display: block; /* При выделении пункта курсором мыши отображается
+  подменю */
+  }
+  h1{
+    margin: 0px;
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    text-align: center;
+    letter-spacing: 2px;
+    color: #ad054b;
+}
+ul{
+  list-style: none;
+ }
+ .signup-form {
+  display: grid;
+  grid-template-columns: 1fr;
+  margin: auto;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkbox-group {
+  grid-column: span 1; 
+}
+
+button {
+  grid-column: span 1; 
+  padding: 2px;
+  background-color: #3c00ff; 
+  color: white; 
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #00ff4c; 
+}
+p {
+  font-family: 'Didact Gothic', sans-serif;
+  color: #ffffff;
+  font-size: 14px;
+  line-height: 22px;
+}
+h2 {
+  font-family: 'Comfortaa', cursive;
+  font-size: 18px;
+  font-weight: 400;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #ff0000;
+}
+a{
+  font-size: 17px;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  letter-spacing: 1.4px;
+}
+.scroll-to-top {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background-color: #0051ff;
+  color: white;
+  padding: 1px 2px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.scroll-to-top:hover {
+  background-color:  #ff0099;
+}
